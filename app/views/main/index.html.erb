@@ -1,0 +1,37 @@
+
+
+<div id="stage">
+
+</div>
+<div id="parametor">
+
+</div>
+
+
+
+<div id="start">
+  <p>
+    <label for="level">難易度を選択してください：</label>
+    <select id="level" name="level">
+      <option value="5">easy</option>
+      <option value="7">normal</option>
+      <option value="9">impossible</option>
+
+    </select>
+  </p>
+  <p>
+    よければお名前をどうぞ：
+    <input id="name" type="text" size="20" maxlength="20">
+  </p>
+  <button onclick="start();">ゲームスタート</button>
+</div>
+
+<div id="status">
+</div>
+
+<div>
+  <%= form_for @score do |form| %>
+  <%= render "form", form: form %>
+      <p><%= form.submit "Send data", disabled: true, id: "submit" %></p>
+  <% end %>
+</div>

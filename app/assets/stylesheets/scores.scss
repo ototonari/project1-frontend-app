@@ -1,0 +1,27 @@
+// Place all the styles related to the scores controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.ranking {
+  font-family: Meiryo, sans-serif;
+  font-size: 86%;
+  tr{
+    padding: 0px;
+    margin: 0px;
+  }
+  th{
+    width: 45px;
+    font-size: small;
+    text-align: right;
+  }
+  td{
+    border: none;
+    width: 100px;
+    text-align: right;
+  }
+  .score{
+    width: 70px;
+  }
+  .name{
+    text-align: left;
+  }
+}

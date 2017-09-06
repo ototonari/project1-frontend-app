@@ -1,0 +1,21 @@
+class MainController < ApplicationController
+  def index
+    @scores = Score.order("score")
+    @score = Score.new()
+    if session[:name]
+      @name = session[:name]
+    end
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+  def search
+    @scores = Score.search(params[:difficulty])
+
+    #redirect_to controller: :main, action: :index, scores: @scores
+  end
+end

@@ -1,0 +1,16 @@
+<% if @scores.present? %>
+
+    <table class="ranking">
+      <% @scores.each_with_index do |score, idx| %>
+        <tr>
+          <td class="rank"><%= "%d ." % (idx + 1) %></td>
+          <td class="name"><%= score.name %></td>
+          <th>SCORE:</th>
+          <td class="score"><%= score.score %></td>
+        </tr>
+      <% end %>
+    </table>
+
+
+
+<% end %>

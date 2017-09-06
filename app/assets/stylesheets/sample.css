@@ -1,0 +1,14 @@
+table td {
+    width: 30px;
+    height: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+
+[class="2"] {
+    background-color: #CDCDCD;
+}
+
+[class="-1"] {
+    background-color: #999999;
+}

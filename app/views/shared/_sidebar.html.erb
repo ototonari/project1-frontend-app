@@ -1,0 +1,15 @@
+<h2>ランキング</h2>
+<div class="menubar">
+  <%= link_to "easy", controller: "scores", action: "search", difficulty: "easy" %>
+  &nbsp;|&nbsp; <%= link_to "normal", controller: "scores", action: "search", difficulty: "normal" %>
+  &nbsp;|&nbsp; <%= link_to "impossible", controller: "scores", action: "search", difficulty: "impossible" %>
+
+</div>
+
+<% if @scores.present? %>
+    <ol>
+      <% @scores.each do |score| %>
+      <li><%= score.name %> : <%= score.score %> Sec.</li>
+      <% end %>
+    </ol>
+<% end %>
