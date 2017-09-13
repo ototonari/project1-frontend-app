@@ -19,10 +19,16 @@
 
     </select>
   </p>
-  <p>
-    よければお名前をどうぞ：
-    <input id="name" type="text" size="20" maxlength="20">
-  </p>
+  <% if session[:name].blank? %>
+    <p>
+      よければお名前をどうぞ：
+      <input id="name" type="text" size="20" maxlength="20" value="">
+    </p>
+  <% else %>
+      <p>Good luck  Mr. <%= session[:name] %> </p>
+      <input id="name" type="hidden" size="20" maxlength="20" value="<%= session[:name] %>">
+  <% end %>
+
   <button onclick="start();">ゲームスタート</button>
 </div>
 

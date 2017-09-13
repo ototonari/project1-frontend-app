@@ -21,6 +21,7 @@ class ScoresController < ApplicationController
 
   def create
     @score = Score.new(params[:score])
+    session[:name] = @score.name
     if @score.save
       redirect_to root_path, notice: "登録されました。"
     else
@@ -35,8 +36,9 @@ class ScoresController < ApplicationController
   end
 
   def search
+    @score = Score.new
     @scores = Score.search(params[:difficulty]).order(score: :asc)
-    render "show"
+    render "main/index"
     #redirect_to controller: :main, action: :index, scores: @scores
   end
 

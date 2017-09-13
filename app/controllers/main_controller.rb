@@ -2,15 +2,17 @@ class MainController < ApplicationController
   def index
     @scores = Score.order("score")
     @score = Score.new()
-    if session[:name]
-      @name = session[:name]
-    end
+
   end
 
   def new
   end
 
   def create
+  end
+
+  def name_seset
+    session[:name] = nil
   end
 
   def search
